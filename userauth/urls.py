@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import CreateView, ListTheView, UpdateTheView, DeleteTheView, logintest, testView
+from .views import CreateView, ListTheView, UpdateTheView, DeleteTheView, logintest, testView, policytest
 from django.views.generic import TemplateView
 
 
@@ -13,6 +13,7 @@ path("", views.CreateView.as_view(), name="Home"),
     path("you", TemplateView.as_view(template_name='views/home.html')), # django default router
     path('<pk>/reset_password', views.reset_password_view, name='reset_password'),
     path("edit", views.testView, name="edit"),
-    path("login", views.logintest,  name="login")
+    path("login", views.logintest,  name="login"),
+    path("policy", views.policytest, name="policy")
 ]
 

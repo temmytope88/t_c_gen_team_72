@@ -13,6 +13,8 @@ def testView(request):
     return render(request, "editprofile.html")
 def logintest(request):
     return render(request, "loginform.html")
+def policytest(request):
+    return render(request, 'policy.html')
 
 
 
